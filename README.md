@@ -24,7 +24,8 @@ Returns user posts, latest first. 'user' parameter is required, otherwise HTTP 4
 ### Following user
 curl -H "Content-Type: application/json" -X POST -d '{"user":"max","followedUser":"peter"}' http://localhost:8080/follower
 
-Returns added followed user details. 'user' and 'followedUser' parameters are required, otherwise HTTP 500 returned
+Returns added followed user details. 'user' and 'followedUser' parameters are required and this pair should be unique,
+otherwise HTTP 500 returned
 
 ### Getting followed users
 curl http://localhost:8080/follower?user=max
